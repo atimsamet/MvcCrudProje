@@ -1,0 +1,17 @@
+﻿@model MvcCrudProje.Models.Departman
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>Guncelle</h2>
+
+@using (Html.BeginForm("Guncelle", "Departman", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Ad)
+        @Html.TextBoxFor(m => m.Ad, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.Id)
+    <button type="submit" class="btn btn-success">Guncelle</button>
+}
